@@ -2,11 +2,12 @@
   "name": "multihashing-async",
   "version": "0.4.7",
   "description": "multiple hash functions",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "browser": {
     "./src/crypto-sha1-2.js": "./src/crypto-sha1-2-browser.js"
   },
   "scripts": {
+		"babel": "babel dist -d lib",
     "test": "aegir-test",
     "test:browser": "aegir-test browser",
     "test:node": "aegir-test node",
@@ -46,6 +47,8 @@
   },
   "devDependencies": {
     "aegir": "^11.0.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "benchmark": "^2.1.4",
     "chai": "^4.1.2",
     "dirty-chai": "^2.0.1",
